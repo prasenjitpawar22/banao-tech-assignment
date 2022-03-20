@@ -1,0 +1,104 @@
+/* nav body  */
+.navbar.wider {
+  display: block;
+  background: #ffffff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+  min-height: 72px;
+}
+.nav-container.smaller {
+  display: none;
+}
+.nav-container {
+  gap: 5px;
+}
+/* nav brand LOGO */
+.navbar-brand {
+  padding-left: 4px;
+}
+
+/* nav form   */
+.nav-form {
+  align-items: center;
+  position: relative !important;
+}
+.nav-search-icon {
+  position: absolute;
+  left: 32px;
+}
+.nav-search {
+  min-width: 400px;
+  min-height: 42px;
+  padding-left: 60px;
+  padding-right: 0;
+  top: 16px;
+  border: none;
+  background: #f2f2f2;
+  border-radius: 21px;
+}
+.nav-search:focus {
+  background: #f2f2f2;
+  box-shadow: none;
+}
+
+/* //media  */
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 991px) {
+  .nav-search {
+    min-width: 200px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .nav-search-icon {
+    left: 15px;
+  }
+  .navbar.wider {
+    /* visibility: hidden; */
+    display: none;
+  }
+  .nav-container.smaller {
+    display: flex;
+    padding-top: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar {
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+  }
+  .nav-smaller-btn {
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    padding: 5px;
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
+
+/* //input  */

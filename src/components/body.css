@@ -1,0 +1,267 @@
+.body-wrapper {
+  margin: 0;
+  padding-top: 72px;
+}
+.main-img-wrapper {
+  position: relative;
+  min-height: 440px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url("../images/radek-grzybowski-eBRTYyjwpRY-unsplash.jpg");
+}
+
+.main-img {
+  width: 100%;
+  min-height: 440px;
+  object-fit: cover;
+  position: relative;
+  opacity: 0.9;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+.main-img-text-wrapper {
+  position: absolute;
+  bottom: 20%;
+  left: 13%;
+}
+.main-img-text-one {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+  color: #ffffff;
+}
+.main-img-text-two {
+  margin: 0;
+  height: 23px;
+  left: 200px;
+  top: 409px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+}
+/* // */
+/* // */
+/* Body contents  */
+/*  */
+.body-nav-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.body-nav-list-wrapper.smaller {
+  display: none;
+}
+
+.body-nav-list-left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+.body-nav-list-left-item {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
+  color: #8a8a8a;
+}
+.body-nav-list-left-item:hover {
+  color: #000000;
+}
+.body-nav-list-left-item.active {
+  border-bottom: 1px solid #000000;
+  color: #000000;
+  padding-bottom: 22px;
+}
+.body-nav-list-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  gap: 16px;
+}
+.body-nav-list-right-item {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  line-height: 20px;
+  font-style: normal;
+  font-family: "IBM Plex Sans";
+}
+.body-nav-list-right-item.two {
+  gap: 6px;
+  background-color: #2f6ce5;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 15px;
+}
+.body-nav-list-right-item.one {
+  padding-bottom: 7px;
+  gap: 10px;
+  background-color: #edeef0;
+  color: #000000;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.post-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  flex-direction: row;
+  gap: 10px;
+  padding-top: 28px;
+}
+.post {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+.post-contents {
+  padding: 20px;
+  padding-bottom: 0px;
+}
+.post-contents-footer {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+}
+.post-tag {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+}
+.post-title {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 134.17%;
+  color: #000000;
+}
+.post-paragraph {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 134.17%;
+  color: #5c5c5c;
+}
+.post-profile-name {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.post-views {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #525252;
+}
+.post-connect-btn {
+  position: relative;
+  border: none;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 4px;
+  background: #edeef0;
+  border-radius: 2px;
+}
+
+.location-input {
+  padding-left: 35px;
+  /* padding-right: 45px; */
+  border: none;
+  padding-bottom: 10.8px;
+  border-bottom: 1px solid #b8b8b8;
+
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #808080;
+}
+.location-input:focus-visible {
+  outline: none;
+}
+.location-input-info {
+  padding-top: 32px;
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  opacity: 0.5;
+}
+.post-right {
+  max-width: 243px;
+  flex-grow: 0;
+}
+.post-left {
+  width: 100%;
+  max-width: 692px;
+  flex-grow: 1;
+}
+
+@media (max-width: 991px) {
+  .body-wrapper {
+    padding-top: 0;
+  }
+  .main-img-wrapper {
+    background-image: url("../images/radek-grzybowski-eBRTYyjwpRY-unsplashSmall.jpg") !important;
+  }
+  .body-nav-list-wrapper.larger {
+    display: none;
+  }
+  .body-nav-list-wrapper.smaller {
+    border-bottom: none;
+    display: flex;
+  }
+  .body-contents {
+    padding: 12px !important;
+  }
+  .post-right {
+    display: none;
+  }
+}
