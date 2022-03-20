@@ -8,17 +8,24 @@ import { AiOutlineExclamationCircle, AiOutlineEye } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { MdModeEdit, MdOutlineWorkOutline } from "react-icons/md";
 import { RiCalendarEventFill } from "react-icons/ri";
-
+import { IoCloseOutline } from "react-icons/io5";
 import post from "../data/post";
 import "./body.css";
 // import postProfileOne from "../images/post-profile-img-one.png";
 
 import AddUser from "../images/AddUser.svg";
 import { useEffect, useState } from "react";
+import { useRef } from "react";
 
 const Body = () => {
+  const [locInputActive, setLocInputActive] = useState(false);
+  const [locValue, setLocValue] = useState("");
+
   useEffect(() => {
-    console.log(post[0].tag);
+    // console.log(post[0].tag);
+    if (locValue === "") {
+      setLocInputActive(false);
+    }
   });
 
   return (
@@ -201,11 +208,17 @@ const Body = () => {
               </label>
               <input
                 className="location-input"
+                onChange={(e) => {
+                  setLocInputActive(true);
+                  setLocValue(e.target.value);
+                }}
+                value={locValue}
+                // onClick={()=> setLocInputActive(true)}
                 type="text"
                 placeholder="Enter your location"
               />
               <label style={{ position: "absolute", right: 0 }}>
-                <MdModeEdit />
+                {locInputActive ? <IoCloseOutline /> : <MdModeEdit />}
               </label>
               <div className="d-flex align-items-center gap-2">
                 <AiOutlineExclamationCircle size={25} />

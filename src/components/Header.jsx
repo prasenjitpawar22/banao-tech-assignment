@@ -48,7 +48,7 @@ const Header = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_1_786)">
+              <g clipPath="url(#clip0_1_786)">
                 <path
                   d="M96.7952 15.498C98.7164 15.498 100.274 13.9393 100.274 12.0165C100.274 10.0938 98.7164 8.53503 96.7952 8.53503C94.8739 8.53503 93.3164 10.0938 93.3164 12.0165C93.3164 13.9393 94.8739 15.498 96.7952 15.498Z"
                   fill="#CDDC36"
@@ -139,8 +139,8 @@ const Header = () => {
                   y2="23.9906"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#00A854" />
-                  <stop offset="1" stop-color="#004D25" />
+                  <stop stopColor="#00A854" />
+                  <stop offset="1" stopColor="#004D25" />
                 </linearGradient>
                 <clipPath id="clip0_1_786">
                   <rect width="162.566" height="24" fill="white" />
