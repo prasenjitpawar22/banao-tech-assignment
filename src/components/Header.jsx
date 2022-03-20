@@ -11,8 +11,30 @@ import { IoArrowBackOutline } from "react-icons/io5";
 import { BsSearch, BsFillCaretDownFill } from "react-icons/bs";
 
 import "./header.css";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  let listener = null;
+  const [scrollState, setScrollState] = useState("top");
+
+  useEffect(() => {
+    listener = document.addEventListener("scroll", (e) => {
+      var scrolled = document.scrollingElement.scrollTop;
+      if (scrolled >= 120) {
+        if (scrollState !== "smaller") {
+          setScrollState("smaller");
+        }
+      } else {
+        if (scrollState !== "top") {
+          setScrollState("top");
+        }
+      }
+    });
+    return () => {
+      document.removeEventListener("scroll", listener);
+    };
+  }, [scrollState]);
+
   return (
     <>
       <Navbar className="navbar wider fixed-top" expand="lg">
@@ -173,7 +195,7 @@ const Header = () => {
         </Container>
       </Navbar>
       {/* smaller screen nav  */}
-      <Navbar className="navbar fixed-top" expand="lg">
+      <Navbar className={`navbar ${scrollState} fixed-top`} expand="lg">
         <Container className="nav-container smaller">
           <Nav className="me-auto">
             <IoArrowBackOutline size={25} />

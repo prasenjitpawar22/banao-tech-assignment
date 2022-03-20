@@ -130,9 +130,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   flex-direction: row;
-  gap: 10px;
+  gap: 40px;
   padding-top: 28px;
 }
 .post {
@@ -206,9 +205,10 @@
 .post-connect-btn {
   position: relative;
   border: none;
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
   background: #edeef0;
   border-radius: 2px;
 }
@@ -306,6 +306,7 @@
     padding-top: 0;
   }
   .main-img-wrapper {
+    background-size: 100% 100%;
     background-image: url("../images/radek-grzybowski-eBRTYyjwpRY-unsplashSmall.jpg") !important;
   }
   .body-nav-list-wrapper.larger {
@@ -326,5 +327,31 @@
   }
   .post-contents-footer {
     gap: 2px;
+  }
+  .main-img-wrapper {
+    min-height: 336px;
+    background-position-y: -100px;
+    background-size: 100% 100%;
+    max-height: 336px !important;
+    background-size: inherit;
+  }
+  .main-img {
+    min-height: 336px;
+    max-height: 336px !important;
+  }
+  .share-span {
+    display: block !important;
+  }
+  .main-img-text-wrapper {
+    left: 4%;
+    bottom: 15%;
+  }
+  .main-img-text-one {
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 22px;
+    color: #ffffff;
   }
 }

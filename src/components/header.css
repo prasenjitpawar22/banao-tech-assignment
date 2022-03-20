@@ -5,6 +5,11 @@
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
   min-height: 72px;
 }
+.navbar.smaller {
+  display: none;
+  /* transition-duration: 1s;
+  transition-delay: 0.1s; */
+}
 .nav-container.smaller {
   display: none;
 }
@@ -47,6 +52,12 @@
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 991px) {
+  .navbar.smaller {
+    background: #567e92;
+    display: block;
+    /* transition-duration: 1s;
+  transition-delay: 0.1s; */
+  }
   .nav-search {
     min-width: 200px;
     padding-left: 40px;

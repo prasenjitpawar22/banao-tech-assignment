@@ -14,12 +14,13 @@ import "./body.css";
 // import postProfileOne from "../images/post-profile-img-one.png";
 
 import AddUser from "../images/AddUser.svg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Body = () => {
   useEffect(() => {
     console.log(post[0].tag);
   });
+
   return (
     <div className=" body-wrapper">
       {/* main image  */}
@@ -116,18 +117,21 @@ const Body = () => {
                     style={{ gap: "40px", paddingBottom: "16px" }}
                   >
                     {data.job && (
-                      <span className="post-span-tag d-flex align-items-center gap-1">
-                        <MdOutlineWorkOutline /> {data.job}
+                      <span className="post-span-tag d-flex align-items-start gap-1">
+                        <MdOutlineWorkOutline style={{ marginTop: "2px" }} />{" "}
+                        {data.job}
                       </span>
                     )}
                     {data.date && (
-                      <span className="post-span-tag d-flex align-items-center gap-1">
-                        <RiCalendarEventFill /> {data.date}
+                      <span className="post-span-tag d-flex align-items-start gap-1">
+                        <RiCalendarEventFill style={{ marginTop: "2px" }} />
+                        {data.date}
                       </span>
                     )}
                     {data.location && (
-                      <span className="post-span-tag d-flex align-items-center gap-1">
-                        <GoLocation /> {data.location}
+                      <span className="post-span-tag d-flex align-items-start gap-1">
+                        <GoLocation style={{ marginTop: "2px" }} />{" "}
+                        {data.location}
                       </span>
                     )}
                     {data.content && (
@@ -136,8 +140,7 @@ const Body = () => {
                   </div>
                   {data.button === "Visit Website" && (
                     <button className="post-btn visit-web">
-                      {" "}
-                      {data.button}{" "}
+                      {data.button}
                     </button>
                   )}
 
@@ -181,8 +184,9 @@ const Body = () => {
                     }}
                   > */}
 
-                  <button className="post-connect-btn">
+                  <button className="post-connect-btn d-flex align-items-center gap-2">
                     <BsFillShareFill className="post-connect-btn-icon" />
+                    <span className="share-span d-none"> Share </span>
                   </button>
                 </div>
               </div>
