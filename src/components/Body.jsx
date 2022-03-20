@@ -6,14 +6,20 @@ import {
 } from "react-icons/bs";
 import { AiOutlineExclamationCircle, AiOutlineEye } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
-import { MdModeEdit } from "react-icons/md";
+import { MdModeEdit, MdOutlineWorkOutline } from "react-icons/md";
+import { RiCalendarEventFill } from "react-icons/ri";
 
+import post from "../data/post";
 import "./body.css";
-import postProfileOne from "../images/post-profile-img-one.png";
-import postImages from "../images/post-img-1.png";
+// import postProfileOne from "../images/post-profile-img-one.png";
+
 import AddUser from "../images/AddUser.svg";
+import { useEffect } from "react";
 
 const Body = () => {
+  useEffect(() => {
+    console.log(post[0].tag);
+  });
   return (
     <div className=" body-wrapper">
       {/* main image  */}
@@ -76,67 +82,114 @@ const Body = () => {
         </div>
         {/* all posts  */}
         <div className="post-wrapper">
-          <div className="post-left flex-grow-1">
-            <div className="post">
-              <img src={postImages} alt="post-one" style={{ width: "100%" }} />
-              <div className="post-contents">
-                <span className="post-tag"> ✍ Article</span>
-                <div
-                  style={{
-                    display: "flex",
-                    paddingTop: "10px",
-                    flexDirection: "row",
-                    alignItems: "flex-start",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <h2 className="post-title">
-                    What if famous brands had regular fonts? Meet RegulaBrands!
-                  </h2>
-                  <BsThreeDots size={25} />
-                </div>
-                <p className="post-paragraph">
-                  I've worked in UX for the better part of a decade. From now
-                  on, I plan to rei…
-                </p>
-              </div>
-              <div className="post-contents-footer">
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "10px",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                  }}
-                >
+          <div className="post-left d-flex flex-column gap-2">
+            {/* all post map  */}
+            {post.map((data, index) => (
+              <div key={index} className="post">
+                {data.image && (
                   <img
-                    src={postProfileOne}
-                    alt=""
-                    className="post-profile-img"
+                    src={data.image}
+                    alt="post-one"
+                    style={{ width: "100%" }}
                   />
-                  <span className="post-profile-name">Sarthak Kamra</span>
+                )}
+                <div className="post-contents">
+                  {data.tag && (
+                    <span className="post-tag">
+                      {data.tagImg} {data.tag}
+                    </span>
+                  )}
+                  <div
+                    style={{
+                      display: "flex",
+                      paddingTop: "10px",
+                      flexDirection: "row",
+                      alignItems: "flex-start",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    {data.title && <h2 className="post-title">{data.title}</h2>}
+                    <BsThreeDots size={25} />
+                  </div>
+                  <div
+                    className="post-span-tag d-flex align-items-center"
+                    style={{ gap: "40px", paddingBottom: "16px" }}
+                  >
+                    {data.job && (
+                      <span className="post-span-tag d-flex align-items-center gap-1">
+                        <MdOutlineWorkOutline /> {data.job}
+                      </span>
+                    )}
+                    {data.date && (
+                      <span className="post-span-tag d-flex align-items-center gap-1">
+                        <RiCalendarEventFill /> {data.date}
+                      </span>
+                    )}
+                    {data.location && (
+                      <span className="post-span-tag d-flex align-items-center gap-1">
+                        <GoLocation /> {data.location}
+                      </span>
+                    )}
+                    {data.content && (
+                      <p className="post-paragraph">{data.content}</p>
+                    )}
+                  </div>
+                  {data.button === "Visit Website" && (
+                    <button className="post-btn visit-web">
+                      {" "}
+                      {data.button}{" "}
+                    </button>
+                  )}
+
+                  {data.button === "Apply on Timesjobs" && (
+                    <button className="post-btn Apply-Timesjobs">
+                      {data.button}
+                    </button>
+                  )}
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "54px",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <span className="post-views">
-                    {" "}
-                    <AiOutlineEye /> 1.4k views
-                  </span>
+                <div className="post-contents-footer">
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "10px",
+                      flexGrow: 1,
+                      flexDirection: "row",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    {data.pic && (
+                      <img src={data.pic} alt="" className="post-profile-img" />
+                    )}
+                    <div className="post-footer-name-views">
+                      {data.name && (
+                        <span className="post-profile-name">{data.name}</span>
+                      )}
+                      <span className="post-views">
+                        {" "}
+                        <AiOutlineEye /> 1.4k views
+                      </span>
+                    </div>
+                  </div>
+                  {/* <div
+                    style={{
+                      display: "flex",
+                      gap: "54px",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  > */}
+
                   <button className="post-connect-btn">
                     <BsFillShareFill className="post-connect-btn-icon" />
                   </button>
                 </div>
               </div>
-            </div>
+              // </div>
+            ))}
           </div>
+          {/* right side of body  */}
           <div className="post-right">
             <form style={{ position: "relative" }}>
               <label style={{ position: "absolute" }}>

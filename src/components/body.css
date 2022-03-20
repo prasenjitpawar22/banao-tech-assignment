@@ -116,9 +116,14 @@
   padding-bottom: 7px;
   gap: 10px;
   background-color: #edeef0;
-  color: #000000;
+  font-family: "IBM Plex Sans";
+  font-style: normal;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 13px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #212529;
 }
 
 .post-wrapper {
@@ -146,10 +151,11 @@
   padding-top: 10px;
   padding-right: 20px;
   display: flex;
+  gap: 40px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 2px;
+  /* gap: 2px; */
 }
 .post-tag {
   font-family: "IBM Plex Sans";
@@ -243,6 +249,57 @@
   max-width: 692px;
   flex-grow: 1;
 }
+.post-footer-name-views {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.post-span-tag {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+.body-nav-list-left-item-smaller {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: #212529;
+}
+
+.post-btn {
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #ffffff;
+  border: 0.7px solid #a9aeb8;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.post-btn.visit-web {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 140.4%;
+  text-align: center;
+  color: #e56135;
+}
+.post-btn.Apply-Timesjobs {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 140.4%;
+  text-align: center;
+  color: #02b875;
+}
 
 @media (max-width: 991px) {
   .body-wrapper {
@@ -263,5 +320,11 @@
   }
   .post-right {
     display: none;
+  }
+  .post-footer-name-views {
+    flex-direction: column;
+  }
+  .post-contents-footer {
+    gap: 2px;
   }
 }

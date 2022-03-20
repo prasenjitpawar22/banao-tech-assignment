@@ -172,6 +172,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      {/* smaller screen nav  */}
       <Navbar className="navbar fixed-top" expand="lg">
         <Container className="nav-container smaller">
           <Nav className="me-auto">
