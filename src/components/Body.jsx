@@ -21,8 +21,8 @@ const Body = () => {
   const [locInputActive, setLocInputActive] = useState(false);
   const [locValue, setLocValue] = useState("");
 
+  // if location input null change icon state
   useEffect(() => {
-    // console.log(post[0].tag);
     if (locValue === "") {
       setLocInputActive(false);
     }
@@ -34,7 +34,7 @@ const Body = () => {
       <div className="main-img-wrapper">
         <div className="main-img">
           <div className="main-img-text-wrapper">
-            <p className="main-img-text-one">Computer Engineering</p>
+            <h1 className="main-img-text-one">Computer Engineering</h1>
             <p className="main-img-text-two">
               142,765 Computer Engineers follow this
             </p>
@@ -103,9 +103,9 @@ const Body = () => {
                 )}
                 <div className="post-contents">
                   {data.tag && (
-                    <span className="post-tag">
+                    <h3 className="post-tag">
                       {data.tagImg} {data.tag}
-                    </span>
+                    </h3>
                   )}
                   <div
                     style={{
@@ -124,22 +124,22 @@ const Body = () => {
                     style={{ gap: "40px", paddingBottom: "16px" }}
                   >
                     {data.job && (
-                      <span className="post-span-tag d-flex align-items-start gap-1">
+                      <h3 className="post-span-tag d-flex align-items-start gap-1">
                         <MdOutlineWorkOutline style={{ marginTop: "2px" }} />{" "}
                         {data.job}
-                      </span>
+                      </h3>
                     )}
                     {data.date && (
-                      <span className="post-span-tag d-flex align-items-start gap-1">
+                      <h3 className="post-span-tag d-flex align-items-start gap-1">
                         <RiCalendarEventFill style={{ marginTop: "2px" }} />
                         {data.date}
-                      </span>
+                      </h3>
                     )}
                     {data.location && (
-                      <span className="post-span-tag d-flex align-items-start gap-1">
+                      <h3 className="post-span-tag d-flex align-items-start gap-1">
                         <GoLocation style={{ marginTop: "2px" }} />{" "}
                         {data.location}
-                      </span>
+                      </h3>
                     )}
                     {data.content && (
                       <p className="post-paragraph">{data.content}</p>
@@ -173,7 +173,7 @@ const Body = () => {
                     )}
                     <div className="post-footer-name-views">
                       {data.name && (
-                        <span className="post-profile-name">{data.name}</span>
+                        <h3 className="post-profile-name">{data.name}</h3>
                       )}
                       <span className="post-views">
                         {" "}
@@ -213,7 +213,6 @@ const Body = () => {
                   setLocValue(e.target.value);
                 }}
                 value={locValue}
-                // onClick={()=> setLocInputActive(true)}
                 type="text"
                 placeholder="Enter your location"
               />

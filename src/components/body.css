@@ -30,11 +30,11 @@
   left: 13%;
 }
 .main-img-text-one {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  margin: 0;
+  line-height: 47px;
   color: #ffffff;
 }
 .main-img-text-two {
@@ -119,10 +119,9 @@
   font-family: "IBM Plex Sans";
   font-style: normal;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 17px;
   /* identical to box height */
-
   color: #212529;
 }
 
@@ -341,6 +340,12 @@
   }
   .share-span {
     display: block !important;
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #212529;
   }
   .main-img-text-wrapper {
     left: 4%;
@@ -353,5 +358,47 @@
     font-size: 27px;
     line-height: 22px;
     color: #ffffff;
+  }
+
+  .post-title {
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    color: #212529;
+  }
+  .post-tag {
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+  }
+  .post-paragraph {
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #495057;
+  }
+  .post-profile-name {
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 17px;
+    color: #212529;
+    margin: 0;
+  }
+  .post-views {
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #495057;
   }
 }
